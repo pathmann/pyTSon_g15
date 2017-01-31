@@ -96,7 +96,7 @@ if sys.platform == 'linux':
             if status == ts3defines.TalkStatus.STATUS_TALKING:
                 if (serverConnectionHandlerID, clientID) in self.talkerids:
                     return
-                (err, name) = ts3lib.getClientVariableAsString(serverConnectionHandlerID, clientID, ts3defines.ClientProperties.CLIENT_NICKNAME)
+                (err, name) = ts3lib.getClientDisplayName(serverConnectionHandlerID, clientID)
                 if err == ts3defines.ERROR_ok:
                     self.talkerids.append((serverConnectionHandlerID, clientID))
                     self.talkernames.append(name)
