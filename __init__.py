@@ -15,8 +15,8 @@ if sys.platform == 'linux':
     class g15plugin(ts3plugin):
         name = "g15"
         requestAutoload = False
-        version = "1.0.1"
-        apiVersion = 20
+        version = "1.0.2"
+        apiVersion = 21
         author = "Thomas \"PLuS\" Pathmann"
         description = "Display information on the g15 connected to g15daemon"
         offersConfigure = False
