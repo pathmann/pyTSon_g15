@@ -58,7 +58,7 @@ if sys.platform == 'linux':
                             title += " Away"
                         (err1, inmute) = ts3lib.getClientSelfVariableAsInt(schid, ts3defines.ClientProperties.CLIENT_INPUT_MUTED)
                         (err2, outmute) = ts3lib.getClientSelfVariableAsInt(schid, ts3defines.ClientProperties.CLIENT_OUTPUT_MUTED)
-                        if (inmute + outmute) >= 1:
+                        if err1 == err2 == ts3defines.ERROR_ok and (inmute + outmute) >= 1:
                             title += " Mute:"
                             if err1 == ts3defines.ERROR_ok and inmute:
                                 title += " in"
